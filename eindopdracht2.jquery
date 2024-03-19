@@ -17,6 +17,7 @@ $(document).ready(function(){
 <button>Click to fade in boxes</button><br><br>
 
 <div id="div" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
 
 </body>
 </html>

@@ -1,72 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="redex.js" charset="utf-8"></script>
-</head>
-<body>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="regex.js" charset="utf-8"></script>
+    </head>
+  <body>
 
+    <p> Taal/Language:
+      <button class="Nederlands">Nederlands</button>
+      <button class="Engels">English</button>
+    </p>
 
-<p> Taal/Language:
-<button class="Nederlands">Nederlands</button>
-<button class="Engels">English</button>
-</p>
+  <div id="div1" style="display:none;">
+    <p> Aanhef:
+      <button class="heer">Heer</button>
+      <button class="mevrouw">Mevrouw</button><br>
+    </p>
+    <form>
+      <label for="voornaam">Naam:</label><br>
+      <input type="text" id="voornaam" name="voornaam" required> * <p id="voornaamresult"></p>
+      <label for="achternaam">Achternaam:</label><br>
+      <input type="text" id="achternaam" name="achternaam" required> * <p id="achternaamresult"></p>
+      <label for="adres">Adres:</label><br>
+      <input type="text" id="adres" name="adres" required> * <p id="adresresult"></p>
+      <label for="woonplaats">Woonplaats:</label><br>
+      <input type="text" id="woonplaats" name="woonplaats" required> * <p id="woonplaatsresult"></p>
+      <label for="postcode">Postcode:</label><br>
+      <input type="text" id="postcode" name="postcode" required> * <p id="postcoderesult"></p>
+      <label for="geboortedatum">Geboortedatum:</label> <br>
+      <input type="date" id="geboortedatum" name="geboortedatum" required> *  <button onclick="show()"> Leeftijd </button> <span id="age"> </span> <br><br>
+      <label for="nationaliteit">Nationaliteit:</label><br>
+      <input type="text" id="nationaliteit" name="nationaliteit" required> * <p id="nationaliteitresult"></p>
+      <label for="beroep">Beroep:</label><br>
+      <input type="text" id="beroep" name="beroep" required> * <p id="beroepresult"></p>
+      <label for="opmerking">Opmerking:</label><br>
+      <textarea name="opmerking" rows="10" cols="30"></textarea><br>
+      <button id="button" type="submit" name="button">verzonden</button>
+    </form>
+  </div>
 
-<div id="div1" style="display:none;">
-  <p> Aanhef:
-  <button class="heer">Heer</button>
-  <button class="mevrouw">Mevrouw</button><br>
-  </p>
-  <form>
-    <label for="voornaam">Naam:</label><br>
-    <input type="text" id="voornaam" name="voornaam" required> * <p id="voornaamresult"></p>
-    <label for="achternaam">Achternaam:</label><br>
-    <input type="text" id="achternaam" name="achternaam" required> * <p id="achternaamresult"></p>
-    <label for="adres">Adres:</label><br>
-    <input type="text" id="adres" name="adres" required> * <p id="adresresult"></p>
-    <label for="woonplaats">Woonplaats:</label><br>
-    <input type="text" id="woonplaats" name="woonplaats" required> * <p id="woonplaatsresult"></p>
-    <label for="postcode">Postcode:</label><br>
-    <input type="text" id="postcode" name="postcode" required> * <p id="postcoderesult"></p>
-    <label for="geboortedatum">Geboortedatum:</label> <br>
-    <input type="date" id="geboortedatum" name="geboortedatum" required> *  <button onclick="show()"> test </button> <span id="age"> </span> <br><br>
-    <label for="nationaliteit">Nationaliteit:</label><br>
-    <input type="text" id="nationaliteit" name="nationaliteit" required> * <p id="nationaliteitresult"></p>
-    <label for="beroep">Beroep:</label><br>
-    <input type="text" id="beroep" name="beroep" required> * <p id="beroepresult"></p>
-    <label for="opmerking">Opmerking:</label><br>
-    <textarea name="opmerking" rows="10" cols="30"></textarea><br>
-    <button id="button" type="button" name="button">verzonden</button>
-  </form>
-</div>
-
-<div id="div2" style="display:none;">
-  <p> Salutation:
-  <button class="heer">Sir</button>
-  <button class="mevrouw">Madam</button><br>
-  </p>
-  <form>
-    <label for="voornaam">First name:</label><br>
-    <input type="text" id="alleenletters" name="voornaam" required> * <p id="result"></p>
-    <label for="achternaam">Surname:</label><br>
-    <input type="text" id="alleenletters" name="achternaam" required> * <p id="result"></p>
-    <label for="adres">Address:</label><br>
-    <input type="text" id="adres" name="adres" required> * <p id="resultadres"></p>
-    <label for="woonplaats">Residence:</label><br>
-    <input type="text" id="alleenletters" name="woonplaats" required> * <p id="result"></p>
-    <label for="postcode">Zipcode:</label><br>
-    <input type="text" id="postcode" name="postcode" required> * <p id="resultpostcode"></p>
-    <label for="geboortedatum">Birthday:</label><br>
-    <input type="date" id="geboortedatum" name="geboortedatum" required> *
-    <label for="nationaliteit">Nationality:</label><br>
-    <input type="text" id="alleenletters" name="nationaliteit" required> * <p id="result"></p>
-    <label for="beroep">Occupation:</label><br>
-    <input type="text" id="alleenletters" name="beroep" required> * <p id="result"></p>
-    <label for="opmerking">Commentary:</label><br>
-    <textarea name="opmerking" rows="10" cols="30"></textarea><br>
-    <button id="button" type="button" name="button">verzonden</button>
-  </form>
-</div><br>
-
-</body>
+  <div id="div2" style="display:none;">
+    <p> Salutation:
+      <button class="heer">Sir</button>
+      <button class="mevrouw">Madam</button><br>
+    </p>
+    <form>
+      <label for="voornaam">First name:</label><br>
+      <input type="text" id="voornaam" name="voornaam" required> * <p id="voornaamresult"></p>
+      <label for="achternaam">Surname:</label><br>
+      <input type="text" id="achternaam" name="achternaam" required> * <p id="achternaamresult"></p>
+      <label for="adres">Address:</label><br>
+      <input type="text" id="adres" name="adres" required> * <p id="adresresult"></p>
+      <label for="woonplaats">Residence:</label><br>
+      <input type="text" id="woonplaats" name="woonplaats" required> * <p id="woonplaatsresult"></p>
+      <label for="postcode">Zipcode:</label><br>
+      <input type="text" id="postcode" name="postcode" required> * <p id="postcoderesult"></p>
+      <label for="geboortedatum">Birthday:</label><br>
+      <input type="date" id="geboortedatum" name="geboortedatum" required> * <button onclick="show()"> Age </button> <span id="age"> </span> <br><br>
+      <label for="nationaliteit">Nationality:</label><br>
+      <input type="text" id="nationaliteit" name="nationaliteit" required> * <p id="nationaliteitresult"></p>
+      <label for="beroep">Occupation:</label><br>
+      <input type="text" id="beroep" name="beroep" required> * <p id="beroepresult"></p>
+      <label for="opmerking">Commentary:</label><br>
+      <textarea name="opmerking" rows="10" cols="30"></textarea><br>
+      <button id="button" type="submit" name="button">verzonden</button>
+    </form>
+  </div><br>
+  </body>
 </html>

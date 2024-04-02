@@ -22,11 +22,11 @@ function show(){
 
 $(document).ready(function(){
     $(".Nederlands").click(function(){
-      $("#div1").fadeIn();
+      $("#div1").fadeIn(2000);
     });
 
     $(".Engels").click(function(){
-      $("#div2").fadeIn();
+      $("#div2").fadeIn(2000);
     });
 
     $(".heer").click(function(){

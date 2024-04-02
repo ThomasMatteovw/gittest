@@ -44,24 +44,13 @@ $(document).ready(function(){
     });
 
     $("#button").click(function() {
-        let voornaam = $("#voornaam").val();
+        let naam = $("#naam").val();
         let pattern = /^[a-z A-Z]+$/;
           if(pattern.test(voornaam)) {
-            $("#voornaamresult").html("Correct");
+            $("#naamresult").html("Correct");
           } else {
-            alert("Something is wrong with your first name");
+            alert("Something is wrong with first name");
           }
-    });
-
-
-    $("#button").click(function() {
-      let achternaam = $("#achternaam").val();
-      let pattern = /^[a-z A-Z]+$/;
-        if(pattern.test(achternaam)) {
-          $("#achternaamresult").html("Correct");
-        } else {
-          alert("Something is wrong with your last name");
-        }
     });
 
     $("#button").click(function() {
@@ -70,7 +59,7 @@ $(document).ready(function(){
       if(pattern.test(adres)) {
         $("#adresresult").html("Correct");
       } else {
-        alert("Something is wrong with your address");
+        alert("Something is wrong with address");
       }
     });
 
@@ -80,7 +69,7 @@ $(document).ready(function(){
         if(pattern.test(woonplaats)) {
           $("#woonplaatsresult").html("Correct");
         } else {
-          alert("Something is wrong with your residence");
+          alert("Something is wrong with residence");
         }
     });
 
@@ -100,7 +89,7 @@ $(document).ready(function(){
           if(pattern.test(nationaliteit)) {
             $("#nationaliteitresult").html("Correct");
           } else {
-            alert("Something is wrong with your nationality");
+            alert("Something is wrong with adres with Nationality");
           }
       });
 
@@ -110,7 +99,7 @@ $(document).ready(function(){
           if(pattern.test(beroep)) {
             $("#beroepresult").html("Correct");
           } else {
-            alert("Something is wrong with your occupation");
+            alert("Something is wrong with adres your occupation");
           }
       });
   });

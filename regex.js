@@ -20,13 +20,22 @@ function show(){
     }
   }
 
+  function language(language){
+      $("label").each(function(){
+      let caption = $(this).attr(language);
+      if(caption != null){
+        $(this).html(caption);
+      }
+    });
+  }
+
 $(document).ready(function(){
-    $(".Nederlands").click(function(){
-      $("#div1").fadeIn();
+    $("#nl").click(function(){
+      language("nl")
     });
 
-    $(".Engels").click(function(){
-      $("#div2").fadeIn();
+    $("#uk").click(function(){
+      language("uk")
     });
 
     $(".heer").click(function(){

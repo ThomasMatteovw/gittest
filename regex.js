@@ -22,11 +22,11 @@ function show(){
 
 $(document).ready(function(){
     $(".Nederlands").click(function(){
-      $("#div1").fadeIn(2000);
+      $("#div1").fadeIn();
     });
 
     $(".Engels").click(function(){
-      $("#div2").fadeIn(2000);
+      $("#div2").fadeIn();
     });
 
     $(".heer").click(function(){
@@ -44,23 +44,35 @@ $(document).ready(function(){
     });
 
     $("#button").click(function() {
-        let naam = $("#naam").val();
+        let voornaam = $("#voornaam").val();
+        alert("voornaam: "+voornaam);
         let pattern = /^[a-z A-Z]+$/;
           if(pattern.test(voornaam)) {
-            $("#naamresult").html("Correct");
+            $("#voornaamresult").html("Correct");
           } else {
-            alert("Something is wrong with first name");
+            alert("Something is wrong with your first name");
+          }
+    });
+
+
+    $("#button").click(function() {
+        let achternaam = $("#achternaam").val();
+        let pattern = /^[a-z A-Z]+$/;
+          if(pattern.test(achternaam)) {
+            $("#achternaamresult").html("Correct");
+          } else {
+            alert("Something is wrong with your surname");
           }
     });
 
     $("#button").click(function() {
       let adres = $("#adres").val();
       let pattern = /^([a-z A-Z]+[0-9]+)$/;
-      if(pattern.test(adres)) {
-        $("#adresresult").html("Correct");
-      } else {
-        alert("Something is wrong with address");
-      }
+        if(pattern.test(adres)) {
+          $("#adresresult").html("Correct");
+        } else {
+          alert("Something is wrong with your address");
+        }
     });
 
     $("#button").click(function() {
@@ -69,7 +81,7 @@ $(document).ready(function(){
         if(pattern.test(woonplaats)) {
           $("#woonplaatsresult").html("Correct");
         } else {
-          alert("Something is wrong with residence");
+          alert("Something is wrong with your residence");
         }
     });
 
@@ -89,17 +101,17 @@ $(document).ready(function(){
           if(pattern.test(nationaliteit)) {
             $("#nationaliteitresult").html("Correct");
           } else {
-            alert("Something is wrong with adres with Nationality");
+            alert("Something is wrong with your nationality");
           }
       });
 
-      $("#button").click(function() {
-        let beroep = $("#beroep").val();
-        let pattern = /^[a-z A-Z]+$/;
-          if(pattern.test(beroep)) {
-            $("#beroepresult").html("Correct");
-          } else {
-            alert("Something is wrong with adres your occupation");
-          }
-      });
+    $("#button").click(function() {
+      let beroep = $("#beroep").val();
+      let pattern = /^[a-z A-Z]+$/;
+        if(pattern.test(beroep)) {
+          $("#beroepresult").html("Correct");
+        } else {
+          alert("Something is wrong with your occupation");
+        }
+    });
   });
